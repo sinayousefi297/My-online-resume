@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #10131d;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+.header {
+    text-align: center;
+    padding: 50px 20px 35px;
+}
+
+.header h1 {
+    font-size: 38px;
+    color: #8b9cff;
+    margin-bottom: 12px;
+}
+
+.header p {
+    color: #a7aec2;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 35px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+.skill-card {
+    background: #1b2030;
+    border: 1px solid #2b3145;
+    border-radius: 18px;
+    padding: 25px 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 25px #00000030;
+}
+
+
+.skill-logo {
+    font-size: 42px;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+
+.gauge {
+    position: relative;
+    width: 160px;
+    max-width: 100%;
+    aspect-ratio: 2 / 1;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.gauge-bg {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: #343a4e;
+}
+
+
+.gauge-fill {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+
+    background: conic-gradient(
+        from 270deg,
+        var(--accent) 0deg,
+        var(--accent) var(--angle),
+        transparent var(--angle),
+        transparent 180deg,
+        transparent 360deg
+    );
+}
+
+
+.gauge-inner {
+    position: absolute;
+    width: 76%;
+    aspect-ratio: 1 / 1;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: #1b2030;
+}
+
+
+.gauge-scale {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #778098;
+}
+
+
+.percentage {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--accent);
+    margin-top: 15px;
+}
+
+.level {
+    font-size: 12px;
+    color: #929bb2;
+    margin-top: 8px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+footer {
+    text-align: center;
+    color: #778098;
+    padding: 45px 15px 25px;
+    font-size: 13px;
+}
+
+
+@media (max-width: 1000px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .skill-card {
+        padding: 20px 8px;
+    }
+
+    .gauge {
+        width: 130px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+}
+.social-section {
+    text-align: center;
+    margin-top: 80px;
+    padding: 50px 20px;
+}
+
+.social-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.social-section p {
+    color: #929bb2;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+
+
+.social-item {
+    width: 145px;
+    height: 90px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    background: #1b2030;
+    border: 1px solid #2b3145;
+
+    border-radius: 16px;
+
+    color: #ffffff;
+
+    transition: all 0.3s ease;
+}
+
+
+
+
+.social-item i {
+    font-size: 30px;
+}
+
+
+/* اسم */
+
+.social-item span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Hover */
+
+.social-item:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--social-color);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
+    color: var(--social-color);
+}
+
+
+
+/* .telegram {
+    --social-color: #229ed9;
+} */
+
+/* .instagram {
+    --social-color: #e1306c;
+} */
+
+/* .github {
+    --social-color: #ffffff;
+} */
+
+/* .linkedin {
+    --social-color: #0a66c2;
+} */
+
+/* .email {
+    --social-color: #ea4335;
+} */
+
+
+@media (max-width: 600px) {
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-item {
+        width: 130px;
+        height: 85px;
+    }
+
+}
